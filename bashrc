@@ -6,6 +6,8 @@ alias gstatus="git status"
 alias gpull="git pull"
 alias gpush="git push"
 alias gco="git commit"
+alias gclone="git clone"
+alias gadd="git add"
 
 #Dir
 
