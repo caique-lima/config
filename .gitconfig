@@ -11,5 +11,8 @@
 [color]
     ui = true
 
+[push]
+    default = simple
+
 [apply]
     whitespace = nowarn
