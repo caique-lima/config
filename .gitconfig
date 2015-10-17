@@ -1,0 +1,15 @@
+[user]
+	email = caique.flima@gmail.com
+	name = Caique Lima
+
+[core]
+    excludesfile = ~/.gitignore
+
+[web]
+    browser = google-chrome
+
+[color]
+    ui = true
+
+[apply]
+    whitespace = nowarn
