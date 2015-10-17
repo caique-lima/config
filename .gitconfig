@@ -9,13 +9,10 @@
     browser = google-chrome
 
 [color]
-    ui = true
+    ui = auto
 
 [push]
     default = simple
-
-[branch]
-    autosetupmerge true
 
 [apply]
     whitespace = nowarn
