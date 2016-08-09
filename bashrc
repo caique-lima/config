@@ -13,3 +13,5 @@ alias gadd="git add"
 
 DEV_DIR="~/Dev/"
 alias devdir="cd $DEV_DIR"
+
+alias copy="pbcopy <"
