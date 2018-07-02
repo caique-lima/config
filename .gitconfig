@@ -9,7 +9,7 @@
 	gpgsign = true
 
 [gpg]
-    program = /usr/local/bin/gpg
+    program = gpg
 
 [web]
     browser = google-chrome
@@ -22,5 +22,3 @@
 
 [apply]
     whitespace = nowarn
-
-
