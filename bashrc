@@ -21,6 +21,18 @@ parse_git_branch() {
 
 export PS1="\u@\h \W\[\033[1;35m\]\$(parse_git_branch)\[\033[00m\] $ "
 
+#S3 utils
+
+s3cat() {
+    s3_path=$1
+
+    if [[ $s3_path != "s3://"* ]]; then
+        s3_path="s3://$1"
+    fi
+
+    aws s3 cp $s3_path -
+}
+
 #Dir
 
 DEV_DIR="~/Dev/"
