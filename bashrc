@@ -94,3 +94,7 @@ alias dkcleanf="docker rm $(docker ps -q -f 'status=exited') && docker rmi $(doc
 
 DATE=`date +%Y-%m-%d`
 alias copy="pbcopy <"
+
+# VI mode
+
+set -o vi
