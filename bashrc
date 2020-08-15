@@ -46,8 +46,43 @@ export LANG=en_US.UTF-8
 
 # Python venv alias
 
-alias venv2="virtualenv --python=python"
-alias venv3="virtualenv --python=/Library/Frameworks/Python.framework/Versions/3.6/bin/python3.6"
+venv() {
+    local env_name="$1"
+    if [[ ! -d "$DEV_DIR/.python_envs/" ]]; then
+        echo "Create folder to store envs"
+        mkdir -p "$DEV_DIR/.python_envs/"
+    fi
+    if [[ -z $env_name ]]; then
+        echo "You should provide an env name"
+    else
+        virtualenv --python=python3 "$DEV_DIR/.python_envs/$env_name"
+    fi
+}
+
+aenv() {
+    local env_name="$1"
+    local env_folder="$DEV_DIR/.python_envs/$1"
+    if [[ -d "$env_folder" ]]; then
+        source "$env_folder/bin/activate"
+    else
+        echo "Env do not exists. Run venv `$env_name` to create it."
+    fi
+}
+
+rmenv() {
+    local env_name="$1"
+    local env_folder="$DEV_DIR/.python_envs/$1"
+    if [[ -d "$env_folder" ]]; then
+        if [[ -z $env_name ]]; then
+            echo "You should provide an env name"
+        else
+            rm -rf "$env_folder"
+        fi
+    else
+        echo "Skipping. Env do not exists"
+    fi
+}
+
 
 # Docker alias
 alias dkcleani="docker rmi $(docker images -q)"
