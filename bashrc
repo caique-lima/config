@@ -35,8 +35,9 @@ s3cat() {
 
 #Dir
 
-DEV_DIR="~/Dev/"
+DEV_DIR="$HOME/Dev"
 alias devdir="cd $DEV_DIR"
+alias dd="devdir"
 
 # Lang
 
